@@ -21,12 +21,14 @@ def fibs(n):
     f = []
     a = 0
     b = 1
-    if n == 0 or n == 1:
-        return n
+    if n == 0:
+        return [0]
+    elif n == 1:
+        return [0, 1]
     else:
         f.append(a)
         f.append(b)
-        while len(f) != n:
+        while len(f) != n+1:
             temp = a + b
             f.append(temp)
             a = b
